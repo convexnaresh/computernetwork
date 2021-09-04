@@ -1,7 +1,7 @@
+#!/usr/bin/python3
 #Author: Naresh Adhikari
 #Date: 09/07/2021
 
-#!/usr/bin/python3
 import socket
 
 client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
