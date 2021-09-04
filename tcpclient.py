@@ -22,5 +22,4 @@ while cli_mesg != "bye":
         data_server = client_socket.recv(4096)
         print("Message FROM the Server>",data_server.decode());
         print("\n");
-client_socket.close()
-~                    
+client_socket.close()                  
