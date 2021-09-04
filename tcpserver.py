@@ -1,8 +1,9 @@
+#!/usr/bin/python3
+
 #Author: Naresh Adhikari
 #Date: 09/07/2021
 #Note: This program is just for learning in this course. It is adapted from different online resources.
 
-#!/usr/bin/python3
 import socket
 server_ip=input("Enter server's IP: ");
 server_port=input("Enter server's port #: ");
