@@ -10,6 +10,7 @@ server_ip=input("Enter Server's IP address:")
 server_port=input("Enter Server's Port Number:")
 print("\n");
 
+client_socket.bind(('',1234))
 client_socket.connect((server_ip, int(server_port)))
 cli_mesg=''
 
