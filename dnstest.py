@@ -1,0 +1,20 @@
+#!./env/bin/python
+https://www.tutorialspoint.com/python_network_programming/python_dns_look_up.htm
+#sudo pip install dnspython
+
+#Or download the source install it via:
+
+#sudo python setup.py install
+
+#Your code would be something like this:
+
+from dns import resolver
+
+res = resolver.Resolver()
+res.nameservers = ['8.8.8.8']
+
+answers = res.query('stackexchange.com')
+
+for rdata in answers:
+    print (rdata.address)
+
