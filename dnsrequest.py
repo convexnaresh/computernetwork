@@ -1,3 +1,9 @@
+
+#Disclaimer: This program code is written or adapted or imported from different sources for education purpose only. 
+#Usage of this code for any 
+#other purpose beyond education is not permitted. 
+#The author pays due credit to the source or original author(s), without explicitly taking their names.
+
 import dns
 import dns.resolver
 

@@ -1,5 +1,12 @@
 #!./env/bin/python
-https://www.tutorialspoint.com/python_network_programming/python_dns_look_up.htm
+
+
+
+#Disclaimer: This program code is written or adapted or imported from different sources for education purpose only. 
+#Usage of this code for any 
+#other purpose beyond education is not permitted. 
+#The author pays due credit to the source or original author(s), without explicitly taking their names.
+#https://www.tutorialspoint.com/python_network_programming/python_dns_look_up.htm
 #sudo pip install dnspython
 
 #Or download the source install it via:
