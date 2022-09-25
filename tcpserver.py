@@ -10,29 +10,39 @@
 
 
 import socket
-server_ip=input("Enter server's IP: ");
-server_port=input("Enter server's port #: ");
 
-serv_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)#tcp protocol
+##Variables
+
+server_ip="127.0.0.1"
+server_port=8889
+
+print("I am a server. My IP address is 127.0.0.1 and I listen to port number is 8889.")
+print("My socket is [127.0.0.1 8889, TCP]")
+print ("Any client can connect to me for chatting!!");
+
+#Creating a socket interface using TCP protocol.
+serv_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 serv_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR,1)
 serv_socket.bind((server_ip, int(server_port)))
 
-print("Server started...");
-print("\tServer IP:",server_ip);
-print("\tServer Port:",int(server_port))
-print("\t(Server waiting for a connection from a client(s))");
-print("......\n")
+#Some message
+print("\t(Server started! Server waiting for a connection from clients ...)");
 count=0;
 
-
-
+#Server listens to the socket..
 serv_socket.listen(5)
 while True:
+
+    #Server accepts a connection.
     conn_socket, client_addr = serv_socket.accept()
     print("Info: Server accepted a connection from client ",client_addr);
     client_data = ''
+
+    #do read data while there is data from server.
     while True:
+
         data = conn_socket.recv(4096)
+        
         if not data: break
         client_data = data.decode()
         print("Message FROM a client> ", client_data)
@@ -47,6 +57,6 @@ while True:
             conn_socket.send(bytes("I cannot talk more. Bye!","utf8"))
         count=count+1
 
-
+    #Close the socket.
     conn_socket.close()
     print ('Info: Connection disconnected!')
